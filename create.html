@@ -8,10 +8,7 @@ body{
     background-color: #f5ecd7;
     color:#3e2723;
     font-family:Garamond, serif;
-    max-width:900px;
-    margin:auto;
-    padding:30px;
-    line-height:1.8;
+   
 
 }
     </style>
@@ -22,23 +19,86 @@ body{
 </head>
 <body style="font-family:cinzel, serif; background-color: beige; color: #333; padding: 20px;">
 
-    <h1><ins>This is the Create Letter page</ins> </h1>
+    <h1><ins> Create Your Letter🎨</ins> </h1>
 
   <p> Start composing your personalised letter here. </p>
 
   <hr>
 
-  <!-- These themes should change the style and tone of your letter , they have different styles.-->
-  <select>
-  <h2> Letter Theme </h2>
-<
-     <option> Love Letter</option>
-     <option> Friendzone Letter</option>
-     <option> Birthday Letter</option>
-     <option> Custom Letter</option>
-  </select>
+  
+  
+
+    <h2> Letter Details</h2>
+
+    <form>
+
+        <label for="sender">Your Name:</label> <br>
+        <input type="text" id="sender" name="sender"><br><br>
+
+        <label for="recipient">Recipient's Name:</label><br>
+        <input type="text" id="recipient" name="recipient"><br><br>
+
+        <label for="date">Date:</label><br>
+        <input type="date" id="date" name="date"><br><br>
+ 
+ <label for="theme">Letter Theme: </label>
+ <select id="theme" name="theme">
+     <option> Love Letter❤️</option>
+     <option> Friendzone Letter😏</option>
+     <option> Birthday Letter🎂</option>
+     <option> Custom Letter©️</option>
+ </select>
 
   <br><br>
+
+        <label for="colour">choose Letter colour :</label>
+        <input type="color" id="colour" name="colour" value="#f5ecd7"><br><br>
+
+        <label for="font">choose Letter font:</label>
+        <select id="font" name="font">
+            <option value="Garamond">Garamond</option>
+            <option value="Cinzel">Cinzel</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Arial">Arial</option>
+            <option value="custom">Custom</option>
+            <option value="comic Sans">Comic Sans </option>
+    
+        </select><br><br>
+
+        <label for="attachtment">Upload a Decorative Image:</label>
+        <input type="file" id="attachtment" name="attachtment"><br><br>
+
+
+        <label> Letter Privacy: </label><br>
+        <input type="radio" id="private" name="privacy">
+        <label for="private">Private</label><br>
+        <input type="radio" id="public" name="privacy">
+        <label for="public">Public</label><br><br>
+
+        <input type="checkbox" id="savecopy">
+        <label for="savecopy">
+Save a copy to my drafts
+        </label>
+
+        <br><br>
+    </form>
+Press this only after you have finished jotting down your letter and are ready to move on to the display page where you can edit and send your letter.
+<br><br>
+        <input type="submit" value="Onward!"><br><br>
+        
+    </form>
+
+
+  <hr>
+
+    <h2>Jot down your Letter</h2>
+
+    <textarea rows="45" cols="50" placeholder="Start writing your letter here..."></textarea>
+
+    <br><br>
+
+    <hr>
+
 
 <!-- This is the editing bar for styling your letter how you see fit  -->
   <h2> Editing Bar</h2>
@@ -48,22 +108,10 @@ body{
     <button> Align Left</button>
     <button> Align Centre</button>
     <button> Align Right</button>
-    <button> Font</button>
-    <button> Font Size</button>
+    
 
     <br><br>
-
-<!-- This is where you can write down your letter. -->
-    <h2>Jot down your Letter</h2>
-
-    <textarea rows="45" cols="50" placeholder="Start writing your letter here..."></textarea>
-
-    <br><br>
-
-    <button>save Draft</button>
-
-    <br><br>
-
+    
 <!-- This takes you to the display page where you can edit and send your letter. -->
   <a class="button" href="display.html" target=_self title=" This takes you back to the display page!">
         📪Next page
