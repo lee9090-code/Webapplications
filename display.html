@@ -1,69 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <style>
-
-body{
-    background-color: #f5ecd7;
-    color:#3e2723;
-    font-family:Garamond, serif;
-    
-
-}
-    </style>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Display</title>
+
+    <title>Letter Preview, InkIt</title>
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
-<body style="font-family: cinzel; background-color: beige; color: #333; padding: 20px;">
-    <h1><ins>This is the Display Letter page</ins> </h1>
-    <p> This is where your beautifully personalised letter will be displayed and edited before sending or saving it for later use. </p>
-    <hr>
 
-     <!-- This is the editing bar for final touches -->
-    <h2>Editing Bar</h2>
-    <button> Edit</button>
-       <select> 
-        <option><button> Bold </button></option>
-        <option><button> correct spelling</button></option>
-        <option><button> Italic</button></option>
-        <option><button> Underline</button></option>
-        <option><button> Align Left</button></option>
-        <option><button> Align Centre</button></option>
-        <option><button> Align Right</button></option>
-        <option><button> Font</button> </option>
-        <option><button> Font Size</button></option>
-       </select>
-    
-    
- 
-    <br><br>
+<body>
 
-    <h2> Your Letter</h2>
+<header>
 
-    <fieldset style="border: 2px solid #333; padding: 20px; background-color: #f9f9f9;">
+    <h1> ✒️ InkIt</h1>
 
-    <legend>Letter Preview</legend>
-    <p> Dear [Recipient's Name], </p>
+    <p class="tagline">
+        <em>"Where words become keepsakes."</em>
+    </p>
 
-    <p> Your letter will appear here once you have written it out. </p>
+    <nav>
 
-    <p> Love </p>
-    <p> [Your Name] </p>
+        <a href="index.html">Home</a>
+        <a href="create.html">Create Letter</a>
+        <a href="display.html">Preview Letter</a>
+        <a href="gallery.html">Gallery</a>
 
-    </fieldset>
 
-    <br><br>
+    </nav>
 
-    <button> save</button>
-    <button> send</button>
+</header>
 
-    <br><br>
+<main>
 
-    <a class="button" href="create.html" target=_self title=" This takes you to the previous page.">
-        🔙Previous Page
-    </a>
+<!-- This is the eye catching section at the top of my webpage  -->
+
+<section class="hero">
+
+    <h2>Your Letter is Ready</h2>
+
+    <p>
+         Read through your words one final time.
+        The finest letters are thoughtful, sincere,
+        and written from the heart.
+    </p>
+
+</section>
+
+<!-- This is where the letter details are displayed-->
+
+<section>
+
+<h2>Letter Information</h2>
+
+<table>
+
+<tr>
+
+<th>Sender</th>
+
+<td>Your Name</td>
+
+</tr>
+
+<tr>
+
+<th>Recipient</th>
+
+<td>Recipient's Name</td>
+
+</tr>
+
+<tr>
+
+<th>Date</th>
+
+<td>Today's Date</td>
+
+</tr>
+
+<tr>
+
+<th>Theme</th>
+
+<td>Love Letter ❤️</td>
+
+</tr>
+
+</table>
+
+</section>
+
+
+
+<!-- This bit shows the letter preview before sending -->
+
+<section>
+
+<h2>Letter Preview</h2>
+
+<fieldset class="letter-preview">
+
+<legend>Your Letter</legend>
+
+<p>Dearest <strong>[Recipient's Name]</strong>,</p>
+
+<br>
+
+<p>
+
+Your beautifully written letter will appear here once you have
+finished writing it on the previous page.
+Take a final moment to read through everything before
+sending it to someone special.
+
+</p>
+
+<br>
+
+<p>
+With warm regards,
+</p>
+
+<p>
+<strong>[Your Name]</strong>
+</p>
+
+</fieldset>
+
+</section>
+
+
+
+<!--This is where one is to do the final touches/adjustments -->
+
+<section>
+
+<h2>Final Adjustments</h2>
+
+<div class="toolbar">
+
+<button type="button">Edit Letter</button>
+
+<button type="button">Bold</button>
+
+<button type="button">Italic</button>
+
+<button type="button">Underline</button>
+
+<button type="button">Align Left</button>
+
+<button type="button">Centre</button>
+
+<button type="button">Align Right</button>
+
+</div>
+
+</section>
+
+<hr>
+
+<!-- This is where you decide on what you would like to do with the letter -->
+
+<section>
+
+<h2>What would you like to do?</h2>
+
+<div class="action-buttons">
+
+<button type="button">
+💾 Save Draft
+</button>
+
+<button type="button">
+📤 Send Letter
+</button>
+
+<button type="button">
+🖨 Print Letter
+</button>
+
+<button type="button">
+⬇ Download
+</button>
+
+</div>
+
+</section>
+
+
+
+<!-- QUOTEEEEEEE -->
+
+<section>
+
+<h2>A Gentle Reminder</h2>
+
+<blockquote>
+
+"Words have a remarkable way of living on long after
+the ink has dried."
+
+</blockquote>
+
+</section>
+
+<hr>
+
+<!-- ================= NAVIGATION ================= -->
+
+<section >
+
+<h2>Need to Make Changes?</h2>
+
+<p>
+
+Return to the writing page if you'd like to improve your
+letter before sending it.
+
+</p>
+
+<a class="button" href="create.html">
+
+✍ Continue Editing
+
+</a>
+
+<a class="button" href="index.html">
+
+🏠 Return Home
+
+</a>
+
+</section>
+
+</main>
+
+<footer>
+
+<hr>
+
+<p>
+
+©️2026 InkIt
+
+</p>
+
+<p>
+
+Every letter tells a story.
+Thank you for choosing InkIt.
+
+</p>
+
+</footer>
 
 </body>
+
 </html>

@@ -1,128 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-
-    <style>
-
-body{
-    background-color: #f5ecd7;
-    color:#3e2723;
-    font-family:Garamond, serif;
-   
-
-}
-    </style>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Create</title>
+
+    <title>Create a Letter | InkIt</title>
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
-<body style="font-family:cinzel, serif; background-color: beige; color: #333; padding: 20px;">
 
-    <h1><ins> Create Your Letter🎨</ins> </h1>
+<body>
 
-  <p> Start composing your personalised letter here. </p>
+<header>
 
-  <hr>
+    <h1>✒️ InkIt</h1>
 
-  
-  
+    <p class="tagline">
+        <em>"Where words become keepsakes."</em>
+    </p>
 
-    <h2> Letter Details</h2>
+    <nav>
 
-    <form>
-
-        <label for="sender">Your Name:</label> <br>
-        <input type="text" id="sender" name="sender"><br><br>
-
-        <label for="recipient">Recipient's Name:</label><br>
-        <input type="text" id="recipient" name="recipient"><br><br>
-
-        <label for="date">Date:</label><br>
-        <input type="date" id="date" name="date"><br><br>
- 
- <label for="theme">Letter Theme: </label>
- <select id="theme" name="theme">
-     <option> Love Letter❤️</option>
-     <option> Friendzone Letter😏</option>
-     <option> Birthday Letter🎂</option>
-     <option> Custom Letter©️</option>
- </select>
-
-  <br><br>
-
-        <label for="colour">choose Letter colour :</label>
-        <input type="color" id="colour" name="colour" value="#f5ecd7"><br><br>
-
-        <label for="font">choose Letter font:</label>
-        <select id="font" name="font">
-            <option value="Garamond">Garamond</option>
-            <option value="Cinzel">Cinzel</option>
-            <option value="Times New Roman">Times New Roman</option>
-            <option value="Arial">Arial</option>
-            <option value="custom">Custom</option>
-            <option value="comic Sans">Comic Sans </option>
-    
-        </select><br><br>
-
-        <label for="attachtment">Upload a Decorative Image:</label>
-        <input type="file" id="attachtment" name="attachtment"><br><br>
+        <a href="index.html">Home</a>
+        <a href="create.html">Create Letter</a>
+        <a href="display.html">Preview Letter</a>
+        <a href="gallery.html">Gallery</a>
 
 
-        <label> Letter Privacy: </label><br>
-        <input type="radio" id="private" name="privacy">
-        <label for="private">Private</label><br>
-        <input type="radio" id="public" name="privacy">
-        <label for="public">Public</label><br><br>
+    </nav>
 
-        <input type="checkbox" id="savecopy">
-        <label for="savecopy">
-Save a copy to my drafts
-        </label>
+</header>
 
-        <br><br>
-    </form>
-Press this only after you have finished jotting down your letter and are ready to move on to the display page where you can edit and send your letter.
+<main>
+
+<section class="hero">
+
+<h2>Create Your Letter</h2>
+
+<p>
+
+Every meaningful letter begins with a name, a thought,
+and the courage to put feelings into words.
+
+</p>
+
+</section>
+
+<form>
+
+<!-- This shows the basic details-->
+
+<section>
+
+<h2>Letter Details</h2>
+
+<label for="sender">Your Name</label>
+
+<input
+type="text"
+id="sender"
+name="sender"
+placeholder="Enter your name">
+
+<label for="recipient">Recipient's Name</label>
+
+<input
+type="text"
+id="recipient"
+name="recipient"
+placeholder="Who is receiving this letter?">
+
+<label for="date">Date</label>
+
+<input
+type="date"
+id="date"
+name="date">
+
+</section>
+
+
+<!-- This is where you will be able to change the letter style/theme -->
+
+<section>
+
+<h2>Letter Style</h2>
+
+<label for="theme">Letter Theme</label>
+
+<select id="theme">
+
+<option>Love Letter ❤️</option>
+
+<option>Friendship Letter 🤝</option>
+
+<option>Birthday Letter 🎂</option>
+
+<option>Congratulations 🎉</option>
+
+<option>Thank You 🌹</option>
+
+<option>Custom Letter ✒️</option>
+
+</select>
+
+<label for="colour">Letter Colour</label>
+
+<input
+type="color"
+id="colour"
+value="#F7E7CE">
+
+<label for="font">
+
+Preferred Font
+
+</label>
+
+<select id="font">
+
+<option>Lora</option>
+
+<option>Cinzel</option>
+
+<option>Garamond</option>
+
+<option>Times New Roman</option>
+
+<option>Arial</option>
+
+</select>
+
+</section>
+
+
+
+<!--This is where you can add decorative elements to your letter -->
+
+<section>
+
+<h2>Decorations</h2>
+
+<label for="attachment">
+
+Upload a Decorative Image
+
+</label>
+
+<input
+
+type="file"
+
+id="attachment"
+
+name="attachment">
+
+</section>
+
+
+
+<!--Privacy Feature -->
+
+<section>
+
+<h2>Privacy</h2>
+
+<input
+
+type="radio"
+
+id="private"
+
+name="privacy">
+
+<label for="private">
+
+Private Letter
+
+</label>
+
 <br><br>
-        <input type="submit" value="Onward!"><br><br>
-        
-    </form>
+
+<input
+
+type="radio"
+
+id="public"
+
+name="privacy">
+
+<label for="public">
+
+Public Letter
+
+</label>
+
+<br><br>
+
+<input
+
+type="checkbox"
+
+id="draft">
+
+<label for="draft">
+
+Save a copy to my drafts
+
+</label>
+
+</section>
+
+<hr>
+
+<!-- letter contents -->
+
+<section>
+
+<h2>Write Your Letter</h2>
+
+<p>
+
+Take your time.
+The most memorable letters are written with sincerity.
+
+</p>
+
+<textarea
+rows="20"
+placeholder="Dearest...
+Begin writing your thoughts here.">
+</textarea>
+
+</section>
+
+<hr>
+
+<!-- editing toolbar -->
+
+<section>
+
+<h2>Formatting Toolbar</h2>
+
+<div class="toolbar">
+
+<button type="button">Bold</button>
+
+<button type="button">Italic</button>
+
+<button type="button">Underline</button>
+
+<button type="button">Align Left</button>
+
+<button type="button">Centre</button>
+
+<button type="button">Align Right</button>
+
+</div>
+
+</section>
 
 
-  <hr>
 
-    <h2>Jot down your Letter</h2>
+<!-- submit button -->   
 
-    <textarea rows="45" cols="50" placeholder="Start writing your letter here..."></textarea>
+<section class="call-to-action">
 
-    <br><br>
+<h2>Finished Writing?</h2>
 
-    <hr>
+<p>
+
+Proceed to the preview page where your letter can be reviewed before saving or sharing.
+
+</p>
 
 
-<!-- This is the editing bar for styling your letter how you see fit  -->
-  <h2> Editing Bar</h2>
-    <button> Bold </button>
-    <button> Italic</button>
-    <button> Underline</button>
-    <button> Align Left</button>
-    <button> Align Centre</button>
-    <button> Align Right</button>
-    
 
-    <br><br>
-    
-<!-- This takes you to the display page where you can edit and send your letter. -->
-  <a class="button" href="display.html" target=_self title=" This takes you back to the display page!">
-        📪Next page
-    </a> 
+</section>
 
-    <br><br>
+</form>
 
-<!-- This takes you back to the home page. -->
-  <a class="button" href="index.html" target=_self title=" This takes you back to the home page.">
-        🏠Back to Home
-    </a>
+<br>
+
+<a class="button" href="display.html">
+
+📨 Preview My Letter
+
+</a>
+
+<a class="button" href="index.html">
+
+🏠 Return Home
+
+</a>
+
+</main>
+
+<footer>
+
+<hr>
+
+<p>
+
+Crafted with ink, intention and timeless memories.
+
+</p>
+
+</footer>
 
 </body>
 
