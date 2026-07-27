@@ -23,293 +23,248 @@
     </p>
 
     <nav>
-
         <a href="index.html">Home</a>
         <a href="create.html">Create Letter</a>
         <a href="display.html">Preview Letter</a>
         <a href="gallery.html">Gallery</a>
-
-
     </nav>
 
 </header>
 
 <main>
 
-<section class="hero">
+    <!-- Hero Section -->
 
-<h2>Create Your Letter</h2>
+    <section class="hero">
 
-<p>
+        <h2>Create Your Letter</h2>
 
-Every meaningful letter begins with a name, a thought,
-and the courage to put feelings into words.
+        <p>
+            Every meaningful letter begins with a name, a thought,
+            and the courage to put feelings into words.
+        </p>
 
-</p>
+    </section>
 
-</section>
+    <!-- Form Begins -->
 
-<form>
+    <form id="letterForm" autocomplete="off">
 
-<!-- This shows the basic details-->
+        <!-- Letter Details -->
 
-<section>
+        <section>
 
-<h2>Letter Details</h2>
+            <h2>Letter Details</h2>
 
-<label for="sender">Your Name</label>
+            <label for="sender">Your Name</label>
 
-<input
-type="text"
-id="sender"
-name="sender"
-placeholder="Enter your name">
+            <input
+                type="text"
+                id="sender"
+                name="sender"
+                placeholder="Enter your name"
+                required>
 
-<label for="recipient">Recipient's Name</label>
+            <label for="recipient">Recipient's Name</label>
 
-<input
-type="text"
-id="recipient"
-name="recipient"
-placeholder="Who is receiving this letter?">
+            <input
+                type="text"
+                id="recipient"
+                name="recipient"
+                placeholder="Who is receiving this letter?"
+                required>
 
-<label for="date">Date</label>
+            <label for="date">Date</label>
 
-<input
-type="date"
-id="date"
-name="date">
+            <input
+                type="date"
+                id="date"
+                name="date"
+                required>
 
-</section>
+        </section>
 
+        <!-- Letter Style -->
 
-<!-- This is where you will be able to change the letter style/theme -->
+        <section>
 
-<section>
+            <h2>Letter Style</h2>
 
-<h2>Letter Style</h2>
+            <label for="theme">Letter Theme</label>
 
-<label for="theme">Letter Theme</label>
+            <select id="theme" required>
 
-<select id="theme">
+                <option value="">-- Select a Theme --</option>
+                <option>Love Letter ❤️</option>
+                <option>Friendship Letter 🤝</option>
+                <option>Birthday Letter 🎂</option>
+                <option>Congratulations 🎉</option>
+                <option>Thank You 🌹</option>
+                <option>Custom Letter ✒️</option>
 
-<option>Love Letter ❤️</option>
+            </select>
 
-<option>Friendship Letter 🤝</option>
+            <label for="colour">Letter Colour</label>
 
-<option>Birthday Letter 🎂</option>
+            <input
+                type="color"
+                id="colour"
+                value="#F7E7CE">
 
-<option>Congratulations 🎉</option>
+            <label for="font">Preferred Font</label>
 
-<option>Thank You 🌹</option>
+            <select id="font">
 
-<option>Custom Letter ✒️</option>
+                <option value="">Choose a Font</option>
+                <option>Lora</option>
+                <option>Cinzel</option>
+                <option>Garamond</option>
+                <option>Times New Roman</option>
+                <option>Arial</option>
 
-</select>
+            </select>
 
-<label for="colour">Letter Colour</label>
+        </section>
 
-<input
-type="color"
-id="colour"
-value="#F7E7CE">
+        <!-- Decorations -->
 
-<label for="font">
+        <section>
 
-Preferred Font
+            <h2>Decorations</h2>
 
-</label>
+            <label for="attachment">
+                Upload a Decorative Image
+            </label>
 
-<select id="font">
+            <input
+                type="file"
+                id="attachment"
+                name="attachment">
 
-<option>Lora</option>
+        </section>
 
-<option>Cinzel</option>
+        <!-- Privacy -->
 
-<option>Garamond</option>
+        <section>
 
-<option>Times New Roman</option>
+            <h2>Privacy</h2>
 
-<option>Arial</option>
+            <input
+                type="radio"
+                id="private"
+                name="privacy"
+                required>
 
-</select>
+            <label for="private">
+                Private Letter
+            </label>
 
-</section>
+            <br><br>
 
+            <input
+                type="radio"
+                id="public"
+                name="privacy">
 
+            <label for="public">
+                Public Letter
+            </label>
 
-<!--This is where you can add decorative elements to your letter -->
+            <br><br>
 
-<section>
+            <input
+                type="checkbox"
+                id="draft">
 
-<h2>Decorations</h2>
+            <label for="draft">
+                Save a copy to my drafts
+            </label>
 
-<label for="attachment">
+        </section>
 
-Upload a Decorative Image
+        <hr>
 
-</label>
+        <!-- Letter -->
 
-<input
+        <section>
 
-type="file"
+            <h2>Write Your Letter</h2>
 
-id="attachment"
+            <p>
+                Take your time.
+                The most memorable letters are written with sincerity.
+            </p>
 
-name="attachment">
+            <p id="wordCount">
+                Words: 0
+            </p>
 
-</section>
+            <textarea
+                id="letterText"
+                rows="20"
+                placeholder="Dearest...
+Begin writing your thoughts here..."></textarea>
 
+        </section>
 
+        <hr>
 
-<!--Privacy Feature -->
+        <!-- Formatting Toolbar -->
 
-<section>
+        <section>
 
-<h2>Privacy</h2>
+            <h2>Formatting Toolbar</h2>
 
-<input
+            <div class="toolbar">
 
-type="radio"
+                <button type="button">Bold</button>
+                <button type="button">Italic</button>
+                <button type="button">Underline</button>
+                <button type="button">Align Left</button>
+                <button type="button">Centre</button>
+                <button type="button">Align Right</button>
 
-id="private"
+            </div>
 
-name="privacy">
+        </section>
 
-<label for="private">
+        <!-- Submit -->
 
-Private Letter
+        <section class="call-to-action">
 
-</label>
+            <h2>Finished Writing?</h2>
 
-<br><br>
+            <p>
+                Proceed to the preview page where your letter can be reviewed before saving or sharing.
+            </p>
 
-<input
+            <button type="submit" class="button">
+                📨 Preview My Letter
+            </button>
 
-type="radio"
+        </section>
 
-id="public"
+    </form>
 
-name="privacy">
+    <br>
 
-<label for="public">
-
-Public Letter
-
-</label>
-
-<br><br>
-
-<input
-
-type="checkbox"
-
-id="draft">
-
-<label for="draft">
-
-Save a copy to my drafts
-
-</label>
-
-</section>
-
-<hr>
-
-<!-- letter contents -->
-
-<section>
-
-<h2>Write Your Letter</h2>
-
-<p>
-
-Take your time.
-The most memorable letters are written with sincerity.
-
-</p>
-
-<textarea
-rows="20"
-placeholder="Dearest...
-Begin writing your thoughts here.">
-</textarea>
-
-</section>
-
-<hr>
-
-<!-- editing toolbar -->
-
-<section>
-
-<h2>Formatting Toolbar</h2>
-
-<div class="toolbar">
-
-<button type="button">Bold</button>
-
-<button type="button">Italic</button>
-
-<button type="button">Underline</button>
-
-<button type="button">Align Left</button>
-
-<button type="button">Centre</button>
-
-<button type="button">Align Right</button>
-
-</div>
-
-</section>
-
-
-
-<!-- submit button -->   
-
-<section class="call-to-action">
-
-<h2>Finished Writing?</h2>
-
-<p>
-
-Proceed to the preview page where your letter can be reviewed before saving or sharing.
-
-</p>
-
-
-
-</section>
-
-</form>
-
-<br>
-
-<a class="button" href="display.html">
-
-📨 Preview My Letter
-
-</a>
-
-<a class="button" href="index.html">
-
-🏠 Return Home
-
-</a>
+    <a class="button" href="index.html">
+        🏠 Return Home
+    </a>
 
 </main>
 
 <footer>
 
-<hr>
+    <hr>
 
-<p>
-
-Crafted with ink, intention and timeless memories.
-
-</p>
+    <p>
+        Crafted with ink, intention and timeless memories.
+    </p>
 
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 
