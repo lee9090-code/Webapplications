@@ -48,7 +48,7 @@
 
     <!-- Form Begins -->
 
-    <form id="letterForm" autocomplete="off">
+    <form id="letterForm" action="save_letter.php" method="POST" autocomplete="off">
 
         <!-- Letter Details -->
 
@@ -92,35 +92,42 @@
 
             <label for="theme">Letter Theme</label>
 
-            <select id="theme" required>
+               <select id="theme" name="theme" required>
 
-                <option value="">-- Select a Theme --</option>
-                <option>Love Letter ❤️</option>
-                <option>Friendship Letter 🤝</option>
-                <option>Birthday Letter 🎂</option>
-                <option>Congratulations 🎉</option>
-                <option>Thank You 🌹</option>
-                <option>Custom Letter ✒️</option>
+    <option value="">-- Select a Theme --</option>
 
-            </select>
+    <option value="Love Letter ❤️">Love Letter ❤️</option>
+
+    <option value="Friendship Letter 🤝">Friendship Letter 🤝</option>
+
+    <option value="Birthday Letter 🎂">Birthday Letter 🎂</option>
+
+    <option value="Congratulations 🎉">Congratulations 🎉</option>
+
+    <option value="Thank You 🌹">Thank You 🌹</option>
+
+    <option value="Custom Letter ✒️">Custom Letter ✒️</option>
+
+</select>
 
             <label for="colour">Letter Colour</label>
 
             <input
                 type="color"
                 id="colour"
+                name="colour"
                 value="#F7E7CE">
 
             <label for="font">Preferred Font</label>
 
-            <select id="font">
+            <select id="font" name="font">
 
                 <option value="">Choose a Font</option>
-                <option>Lora</option>
-                <option>Cinzel</option>
-                <option>Garamond</option>
-                <option>Times New Roman</option>
-                <option>Arial</option>
+                <option value="Lora">Lora</option>
+                <option value="Cinzel">Cinzel</option>
+                <option value="Garamond">Garamond</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Arial">Arial</option>
 
             </select>
 
@@ -164,7 +171,8 @@
             <input
                 type="radio"
                 id="public"
-                name="privacy">
+                name="privacy"
+                value="public">
 
             <label for="public">
                 Public Letter
@@ -201,9 +209,10 @@
 
             <textarea
                 id="letterText"
+                name="letterText"
                 rows="20"
                 placeholder="Dearest...
-Begin writing your thoughts here..."></textarea>
+Begin writing your thoughts here..." required></textarea>
 
         </section>
 
@@ -217,12 +226,12 @@ Begin writing your thoughts here..."></textarea>
 
             <div class="toolbar">
 
-                <button type="button">Bold</button>
-                <button type="button">Italic</button>
-                <button type="button">Underline</button>
-                <button type="button">Align Left</button>
-                <button type="button">Centre</button>
-                <button type="button">Align Right</button>
+                <button type="button" id="boldBtn">Bold</button>
+                <button type="button" id="italicBtn">Italic</button>
+                <button type="button" id="underlineBtn">Underline</button>
+                <button type="button" id="alignLeftBtn">Align Left</button>
+                <button type="button" id="centreBtn">Centre</button>
+                <button type="button" id="alignRightBtn">Align Right</button>
 
             </div>
 
@@ -241,7 +250,7 @@ Begin writing your thoughts here..."></textarea>
             <button type="submit" class="button">
                 📨 Preview My Letter
             </button>
-
+             
         </section>
 
     </form>

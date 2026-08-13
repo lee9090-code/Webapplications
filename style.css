@@ -614,3 +614,13 @@ color:#F7E7CE;
 margin-bottom:20px;
 
 }
+/* Welcome Message */
+
+#welcome-message {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #461615;
+    margin: 20px auto;
+}
